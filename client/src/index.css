@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-ink: #16202e;
+  --color-paper: #eff2f6;
+  --color-ultra: #2d3fd0;
+  --color-ultra-soft: #e4e7fb;
+  --color-mark: #ffe066;
+  --color-muted: #5a6578;
+  --color-line: #d5dbe5;
+  --color-good: #1e7b4f;
+  --color-warn: #b3500b;
+}
+
+html, body, #root { min-height: 100%; }
+body { margin: 0; background: var(--color-paper); color: var(--color-ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+
+/* Highlighter-pen treatment for the sentence a finding stands on. */
+.marker {
+  background-image: linear-gradient(transparent 58%, var(--color-mark) 58%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+:focus-visible { outline: 2px solid var(--color-ultra); outline-offset: 2px; }
+
+@keyframes breathe { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+@media (prefers-reduced-motion: no-preference) {
+  .breathe { animation: breathe 1.3s ease-in-out infinite; }
+}

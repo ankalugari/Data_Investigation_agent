@@ -1,0 +1,23 @@
+{
+  "name": "data-investigation-agent-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "alasql": "^4.19.1",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1",
+    "groq-sdk": "^1.6.0",
+    "multer": "^2.4.0",
+    "papaparse": "^5.7.0"
+  },
+  "optionalDependencies": {
+    "@huggingface/transformers": "^4.3.0"
+  }
+}
