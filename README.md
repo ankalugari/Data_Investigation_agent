@@ -87,3 +87,4 @@ Covers profiling, every tool, the SQL guard, the full agent loop (plan, tools, c
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a747ebad-4c99-4702-96ff-cb6b5bae84a2" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/76f1f5c9-a674-4d0b-9125-5b8725ba64ef" />
 
+
