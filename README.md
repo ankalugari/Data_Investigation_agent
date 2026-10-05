@@ -84,12 +84,6 @@ npm test
 ```
 
 Covers profiling, every tool, the SQL guard, the full agent loop (plan, tools, critic revision, memory recall, cancellation) using a scripted stand-in for the model, and the streaming HTTP endpoint. They do not call Groq, so no API key is needed.
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a747ebad-4c99-4702-96ff-cb6b5bae84a2" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/76f1f5c9-a674-4d0b-9125-5b8725ba64ef" />
 
-## Notes and limits
-
-- Datasets live in server memory and are lost on restart. The vector memory is saved to `server/.data/vectors.json`.
-- SQL runs on AlaSQL in-process behind a read-only guard (single SELECT, forbidden keywords). That is fine for local use. If you expose this to untrusted users, run queries in a separate sandboxed process.
-- Column names are lowercased and snake_cased on upload. Names AlaSQL treats as keywords (for example `value`, `count`) get a trailing underscore.
-- Dates are normalized to `YYYY-MM-DD`. Ambiguous `dd/mm/yyyy` values are read day-first.
-- Findings are only as good as the data and the notes you provide. Treat the report as a well-evidenced lead, not a verdict, especially where confidence is below high.
-- Free Groq tiers have rate limits. If you see a rate-limit message, wait a minute and retry.
